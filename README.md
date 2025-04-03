@@ -1,21 +1,32 @@
-# React Project Generator
+# React Project Generator Scripts
 
-A simple bash script to quickly generate a new React project with Vite and an organized folder structure.
+A collection of bash scripts to quickly generate new React projects with organized folder structures. This repository includes two script options:
+
+1. **Basic React Setup** - A clean React + Vite setup with a standard folder structure
+2. **React + Tailwind CSS Setup** - Same as the basic setup but with Tailwind CSS pre-configured
 
 ## Purpose
 
-This tool helps developers quickly bootstrap a new React project with a standardized folder structure, saving time that would otherwise be spent manually creating directories and organizing files. It's particularly useful for teams that want to maintain consistency across projects or for developers who frequently start new React applications.
+These tools help developers quickly bootstrap new React projects with standardized folder structures, saving time that would otherwise be spent manually creating directories and organizing files. They're particularly useful for teams that want to maintain consistency across projects or for developers who frequently start new React applications.
 
-## What it Does
+## What They Do
+
+### Basic React Setup (`create-react-basic.sh`)
 
 - Creates a new React project using Vite
 - Sets up a comprehensive and organized folder structure following best practices
 - Initializes a Git repository with appropriate `.gitignore`
 - Creates placeholder files to ensure Git tracks empty directories
 - Generates a simple "Hello World" React application as a starting point
-- Provides detailed documentation on the folder structure
 
-### Folder Structure Created
+### React + Tailwind CSS Setup (`create-react-tailwind.sh`)
+
+- Does everything the basic setup does
+- Additionally installs and configures Tailwind CSS
+- Uses Tailwind classes in the sample components
+- Provides a more styled Hello World example
+
+### Folder Structure Created (Both Scripts)
 
 ```
 src/
@@ -48,29 +59,32 @@ src/
    cd react-project-generator
    ```
 
-3. Make the script executable:
+3. Make the scripts executable:
    ```bash
-   chmod +x create-react-project.sh
+   chmod +x create-react-basic.sh create-react-tailwind.sh
    ```
 
 ## How to Use
 
-### Basic Usage
-
-Run the script with a project name:
+### Basic React Setup
 
 ```bash
-./create-react-project.sh my-awesome-project
+./create-react-basic.sh my-project-name
 ```
 
-This will create a new folder called `my-awesome-project` with all the necessary structure.
-
-### Using the Default Project Name
-
-If you run the script without specifying a project name, it will use the default name "my-react-app":
+### React with Tailwind CSS
 
 ```bash
-./create-react-project.sh
+./create-react-tailwind.sh my-tailwind-project
+```
+
+### Using Default Project Names
+
+Both scripts use a default project name if none is provided:
+
+```bash
+./create-react-basic.sh     # Creates "my-react-app"
+./create-react-tailwind.sh  # Creates "my-react-tailwind-app"
 ```
 
 ### After Creation
@@ -94,17 +108,17 @@ Once the project is created:
 ## Requirements
 
 - Node.js (v18 or later recommended)
-- npm or yarn
+- npm
 - Bash shell environment
 
 ## Customization
 
-Feel free to modify the script to suit your specific needs:
+Feel free to modify the scripts to suit your specific needs:
 
 - Add or remove folders from the structure
-- Change the default project name
+- Change the default project names
 - Include additional dependencies or configuration files
-- Modify the "Hello World" template
+- Modify the template components
 
 ## License
 
